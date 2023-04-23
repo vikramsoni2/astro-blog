@@ -1,19 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
 :root {
   --background-body: #fff;
   --text-main: #36393b;
   --text-secondary: #6b6f72;
   --primary-color: #548e9b;
-  --font-family-serif: 'Inter';
-  --font-family-sans: 'Inter';
+  --font-family-serif: "source-sans-3-variable", sans-serif;;
+  --font-family-sans: "Inter", sans-serif;
+  --font-weight: 300;
 }
 
 :root.theme-dark {
-  --background-body: #202122;
-  --text-main: #fff;
+  --background-body: #222831;
+  --text-main: #eee;
   --text-secondary: #ccc;
   --primary-color: #69f5ff;
+  --font-weight: 200;
 }
 
 *,
@@ -24,11 +27,12 @@
 
 body {
   margin: 0;
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-sans);
   font-size: 16px;
   line-height: 1.6;
   background-color: var(--background-body);
   color: var(--text-main);
+  font-weight: var(--font-weight);
 }
 
 h1,
@@ -37,14 +41,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-family-sans);
-  font-weight: 700;
+  font-family: var(--font-family-serif);
+  font-weight: 600;
   line-height: 1.2;
   margin: 0 0 0.5em 0;
 }
 
 h1 {
-  font-family: var(--font-family-serif);
   font-size: 4em;
   margin: 0 0 1em 0;
 }
@@ -74,9 +77,8 @@ p,
 ul,
 ol {
   font-size: 1.3rem;
-  line-height: 1.75em;
+  line-height: 1.7em;
   margin: 1.2em 0;
-  font-weight: 300;
 }
 
 ol,
