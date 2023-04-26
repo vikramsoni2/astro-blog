@@ -1,11 +1,11 @@
-const imagesLoaded = require('imagesloaded');
+// const imagesLoaded = require('imagesloaded');
 
 // Preload images
-const preloadImages = (selector = 'img') => {
-    return new Promise((resolve) => {
-        imagesLoaded(document.querySelectorAll(selector), {background: true}, resolve);
-    });
-};
+// const preloadImages = (selector = 'img') => {
+//     return new Promise((resolve) => {
+//         imagesLoaded(document.querySelectorAll(selector), {background: true}, resolve);
+//     });
+// };
 
 const calcWinsize = () => {
     return { width: window.innerWidth, height: window.innerHeight };
@@ -70,7 +70,7 @@ const adjustedBoundingRect = el => {
 }
 
 export { 
-    preloadImages,
+    // preloadImages,
     calcWinsize,
     getScrollValues,
     wrapLines,

@@ -5,55 +5,18 @@ const title = 'Vikram Soni';
 const description = 'Vikram Soni, Machine Learning Consultant based in Madrid, Spain.';
 const permalink = Astro.site.href;
 ---
-
-<BaseLayout title={title} description={description} permalink={permalink}>
-  <div class="home-container">
-
-    <!-- <div class="home-image"></div> -->
-
-    <div class="home-copy">
-      <p>Vikram Soni &mdash; Machine Learning Consultant</p>
-      <h1>AI and data science enthusiast, passionate about machine learning, predictive modeling and artificial neural networks.</h1>
-    </div>
-
-    <!-- <div class="hero-image-container">
-
-      <picture>
-        <source srcset="/assets/home-illustration.webp" media="(min-width: 600px)">
-        <img class="hero-image" alt="Illustration of person reading a book" src="/assets/home-illustration-small.webp" width="550" height="466">
-      </picture>
-
-      
-    </div> -->
-  </div>
-</BaseLayout>
-
-<!-- <script>
-import SplitType from 'split-type';
-
-
-let el = '.home-copy h1';
-const SplitTypeInstance = new SplitType(el, { types: 'lines' });
-wrapLines(SplitTypeInstance.lines, 'div', 'oh');
-
-</script> -->
-
 <style>
-
-  .oh {
-    overflow: hidden;
-  }
 
   .home-container {
     align-items: center;
     display: flex; 
     flex: 1;
-    justify-content: center;
     min-height: 100;
   }
 
   .home-copy {
     padding: 0 1em;
+    max-width: 70%;
   }
 
   .home-copy h1 {
@@ -61,17 +24,17 @@ wrapLines(SplitTypeInstance.lines, 'div', 'oh');
     font-weight: 600;
     margin-bottom: 0em;
     line-height: 1.3;
-    max-width: 70%;
+    /* max-width: 70%; */
     /* font-variation-settings: "wght" 300; */
   }
-  :root.theme-dark .home-copy h1 {
+  /* :root.theme-dark .home-copy h1 {
     background: radial-gradient(ellipse at center, #eff1ff 20%, #000 100%);
     background-size: 180% 180%;
     background-position: 60% center;
     background-clip: text; 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
+  } */
 
   .home-copy p {
     font-size: 1.3em;
@@ -130,3 +93,49 @@ wrapLines(SplitTypeInstance.lines, 'div', 'oh');
     }
   }
 </style>
+
+<BaseLayout title={title} description={description} permalink={permalink}>
+  <div class="home-container">
+
+    <!-- <div class="home-image"></div> -->
+
+    <div class="home-copy">
+      <p>Vikram Soni &mdash; Machine Learning Consultant</p>
+      <h1>AI and data science enthusiast, passionate about machine learning, predictive modeling and artificial neural networks.</h1>
+    </div>
+
+    <!-- <div class="hero-image-container">
+
+      <picture>
+        <source srcset="/assets/home-illustration.webp" media="(min-width: 600px)">
+        <img class="hero-image" alt="Illustration of person reading a book" src="/assets/home-illustration-small.webp" width="550" height="466">
+      </picture>
+
+      
+    </div> -->
+  </div>
+</BaseLayout>
+
+<script>
+import { gsap } from 'gsap';
+import SplitType from 'split-type';
+import { wrapLines } from '../js/utils';
+
+const text = new SplitType('.home-copy h1', { types: 'lines' })
+
+wrapLines(text.lines, 'div', 'oh');
+gsap.killTweensOf(text.lines);
+gsap.timeline({defaults: {duration: 1.2, ease: 'expo'}})
+.set(text.lines, {
+    y: '150%',
+    rotate: 15
+})
+.to(text.lines, {
+    y: '0%',
+    rotate: 0,
+    stagger: 0.04
+});
+
+</script>
+
+

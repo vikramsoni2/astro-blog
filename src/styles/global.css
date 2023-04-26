@@ -258,6 +258,18 @@ input[name='theme-toggle'] {
   z-index: -1;
 }
 
+
+
+.line {
+  transform-origin: 0% 50%;
+  padding-bottom: 0.35rem;
+  white-space: nowrap;
+  will-change: transform;
+}
+.oh {
+  overflow: hidden;
+}
+
 @media (max-width: 1020px) {
   h1 {
     font-size: 3em;

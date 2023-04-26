@@ -20,6 +20,6 @@
   "dependencies": {
     "gsap": "^3.8.0",
     "imagesloaded": "^4.1.4",
-    "split-type": "^0.2.5"
+    "split-type": "^0.3.3"
   }
 }

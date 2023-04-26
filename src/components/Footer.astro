@@ -1,10 +1,10 @@
 <footer>
   <span class="social">
     <a href="https://www.linkedin.com/in/vikramsoni2/"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://github.com/vikramsoni2"><i class="fab fa-github"></i></a>
-      <a href="https://www.kaggle.com/vikramsoni2"><i class="fab fa-kaggle"></i></a>
-      <a href="https://codepen.io/vikramsoni"><i class="fab fa-codepen"></i></a>
-      <a href="https://www.instagram.com/vikram.soni2/"><i class="fab fa-instagram"></i></a>
+    <a href="https://github.com/vikramsoni2"><i class="fab fa-github"></i></a>
+    <a href="https://www.kaggle.com/vikramsoni2"><i class="fab fa-kaggle"></i></a>
+    <a href="https://codepen.io/vikramsoni"><i class="fab fa-codepen"></i></a>
+    <a href="https://www.instagram.com/vikram.soni2/"><i class="fab fa-instagram"></i></a>
   </span>
   <span class="copyright">
     &copy; {new Date().getFullYear()} vsoni.com
@@ -30,5 +30,26 @@
     display: flex;
     gap: 1rem;
   }
+  .social a {
+    opacity: 0;
+  }
   
 </style>
+
+<script>
+import { gsap } from 'gsap';
+
+let social = document.querySelectorAll('.social a')
+gsap.killTweensOf(social);
+gsap.timeline({defaults: {duration: 0.2, ease: 'expo'}})
+.set(social, {
+    y: '200%',
+    opacity: 0,
+    delay:1
+})
+.to(social, {
+    y: '0%',
+    opacity:1,
+    stagger: 0.2
+});
+</script>
