@@ -20,6 +20,7 @@
   "dependencies": {
     "gsap": "^3.8.0",
     "imagesloaded": "^4.1.4",
+    "sass": "^1.62.1",
     "split-type": "^0.3.3"
   }
 }

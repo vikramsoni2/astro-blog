@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,500;1,300;1,400;1,500&amp;display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Martel:wght@400;700;800&display=swap'); */
 
 :root {
   --background-body: #fff;
   --text-main: #36393b;
   --text-secondary: #6b6f72;
   --primary-color: #548e9b;
-  --font-family-head: "source-sans-3-variable", sans-serif;;
+  --font-family-head: "source-sans-3-variable", sans-serif;
   --font-family-body: "Inter", sans-serif;
+  /* --font-family-head: "Martel", serif; */
   --font-weight: 300;
 }
 
